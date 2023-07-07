@@ -1,0 +1,17 @@
+.home_container {
+    box-sizing: border-box;
+			text-align: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image:url("https://img.elo7.com.br/product/zoom/43EC7BA/capa-painel-redondo-em-tecido-1-50m-tema-copa-do-mundo-festa.jpg");
+			width: 50%;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			font-size: large;
+			position: absolute;
+            top: 80; /* detalhe q tirei o %*/
+       		left: 25%;
+    		border-radius: 10px; 
+			color: black;
+  }
+
+ 
