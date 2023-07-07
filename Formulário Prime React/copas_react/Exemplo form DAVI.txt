@@ -1,0 +1,55 @@
+app.js 
+
+import React, { useState } from 'react';
+import { Dialog } from 'primereact/dialog';
+import { Button } from 'primereact/button';
+import { InputText } from 'primereact/inputtext';
+
+const App = () => {
+  const [displayDialog, setDisplayDialog] = useState(false);
+  const [parametro, setParametro] = useState({});
+
+  const dialogFooter = (
+    <div>
+      <Button label="Save" onClick={() => setDisplayDialog(false)} />
+      <Button label="Cancel" onClick={() => setDisplayDialog(false)} />
+    </div>
+  );
+
+  const updateParametro = (rowData) => {
+    setParametro(rowData);
+    setDisplayDialog(true);
+  };
+
+  return (
+    <div>
+      <Button label="Edit" onClick={() => updateParametro(parametro)} />
+
+      <Dialog
+        visible={displayDialog}
+        style={{ width: '450px' }}
+        header="Parametros"
+        modal
+        onHide={() => setDisplayDialog(false)}
+        footer={dialogFooter}
+      >
+        <div className="p-grid p-fluid">
+          <div className="p-col-4">
+            <label htmlFor="servico">SERVIÇO</label>
+          </div>
+          <div className="p-col-8">
+            <InputText
+              id="servico"
+              value={parametro.SERVICO || ''}
+              onChange={(e) =>
+                setParametro({ ...parametro, SERVICO: e.target.value })
+              }
+            />
+          </div>
+        </div>
+      </Dialog>
+    </div>
+  );
+};
+
+export default App;
