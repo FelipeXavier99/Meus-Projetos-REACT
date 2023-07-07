@@ -1,0 +1,9 @@
+.nav-links {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-links li {
+    margin-right: 10px;
+  }
+  
