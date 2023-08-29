@@ -20,3 +20,9 @@ PostCSS Language Support(Extensao do VS CODE)
 -deixar tailiwind.config.js igual do gitHub
 
 
+
+https://github.com/FelipeXavier99/Meus-Projetos-REACT/assets/127893679/41a8872a-ac15-4d41-b631-3e61418ef2d4
+
+
+
+
